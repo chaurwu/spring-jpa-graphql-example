@@ -18,3 +18,7 @@ create sequence if not exists SERVICE_ID_SEQ;
 
 INSERT INTO env (name) VALUES ('staging');
 INSERT INTO env (name) VALUES ('prod');
+
+INSERT INTO service (name, env_id) VALUES ('service1', 1);
+INSERT INTO service (name, env_id) VALUES ('service2', 1);
+INSERT INTO service (name, env_id) VALUES ('service3', 1);
