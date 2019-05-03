@@ -8,16 +8,20 @@ import javax.persistence.SequenceGenerator;
 import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @Entity
-@Data
 @AllArgsConstructor
 @RequiredArgsConstructor
 @NoArgsConstructor
+@Getter 
+@Setter
+@ToString
 @SequenceGenerator(name="ENV_ID", sequenceName="ENV_ID_SEQ", allocationSize = 1)
 public class Env {
 	

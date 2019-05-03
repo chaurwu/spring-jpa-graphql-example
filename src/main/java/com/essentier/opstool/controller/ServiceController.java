@@ -5,10 +5,10 @@ import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.essentier.opstool.dao.ServiceRepository;
-import com.essentier.opstool.model.Env;
 import com.essentier.opstool.model.Service;
 
 @RestController
@@ -21,8 +21,8 @@ public class ServiceController {
 	}
 	
 	@GetMapping(SERVICES_URI)
-	List<Service> getAll() {
-		return repository.findAll();
+	List<Service> getServicesOfEnv(@RequestParam Long envId) {
+		return repository.findByEnvId(envId);
 	}
 
 	@PostMapping(SERVICES_URI)
