@@ -19,11 +19,6 @@ public class ServiceController {
 	ServiceController(ServiceRepository repository) {
 		this.repository = repository;
 	}
-	
-	@GetMapping(SERVICES_URI)
-	List<Service> getServicesOfEnv(@RequestParam Long envId) {
-		return repository.findByEnvId(envId);
-	}
 
 	@PostMapping(SERVICES_URI)
 	Service create(@RequestBody Service newService) {

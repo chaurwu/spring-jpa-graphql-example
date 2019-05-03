@@ -15,3 +15,6 @@ create table service (
 
 create sequence if not exists ENV_ID_SEQ;
 create sequence if not exists SERVICE_ID_SEQ;
+
+INSERT INTO env (name) VALUES ('staging');
+INSERT INTO env (name) VALUES ('prod');
